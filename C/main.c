@@ -1,60 +1,28 @@
 #include <stdio.h>
 #include <string.h>
 
-#define LINE_NUMBER 100
-#define LINE_LENGTH 1000
-
-int get_input(char (*text)[LINE_LENGTH]);
-void print(char (*text)[LINE_LENGTH], size_t);
+int compare(const void *, const void *, int (*)(const void *, const void *));
+int numberic_compare(const int *, const int *);
+int string_compare(const char *, const char *);
 
 int main(int argc, const char * argv[]) {
     
-    char text[LINE_NUMBER][LINE_LENGTH];
+    char * s1 = "abw";
+    char * s2 = "abc";
     
-    const size_t size = get_input(text);
-    print(text,size);
+    printf("compare=%d\n", compare(s1, s2, (int (*)(const void *, const void *))string_compare));
     
     return 0;
 }
 
-int get_input(char (*text)[LINE_LENGTH]) {
-    
-    int  i=0;
-    char tmp[LINE_LENGTH];
-    
-    printf("Enter text:\n");
-    while (i < LINE_NUMBER) {
-        scanf("%[^\n]", tmp);
-        
-        printf("size=%d\n", (int)strlen(tmp));
-        printf("size=%d\n", tmp[0]);
-        printf("size=%d\n", tmp[1]);
-        if (strlen(tmp) == 0) {
-            break;
-        }
-        
-        strcpy(text[i++], tmp);
-    }
-    
-    printf("i=%d\n", i);
-    return i;
+int numberic_compare(const int * x, const int * y) {
+    return (*x < *y) ? -1 : ((*x == *y) ? 0 : 1);
 }
 
-void print(char (*text)[LINE_LENGTH], size_t size) {
-    int i=0;
-    
-    for (i=0; i<size; i++) {
-        printf("%s\n", text[i]);
-    }
-    printf("\n");
+int string_compare(const char * s1, const char * s2) {
+    return strcmp(s1, s2);
 }
 
-
-
-
-
-
-
-
-
-
+int compare(const void * x, const void *y, int (*comp)(const void *, const void *)) {
+    return comp(x,y);
+}

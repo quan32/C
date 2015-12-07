@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		E965C2D91C1514C300BED2A9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = E965C2D81C1514C300BED2A9 /* main.c */; };
+		E965C2E11C152EBE00BED2A9 /* 2-demensional-array.c in Sources */ = {isa = PBXBuildFile; fileRef = E965C2E01C152EBE00BED2A9 /* 2-demensional-array.c */; };
+		E965C2E31C1556A100BED2A9 /* n-demensional-array.c in Sources */ = {isa = PBXBuildFile; fileRef = E965C2E21C1556A100BED2A9 /* n-demensional-array.c */; };
+		E965C2E81C15720B00BED2A9 /* file_1.c in Sources */ = {isa = PBXBuildFile; fileRef = E965C2E71C15720B00BED2A9 /* file_1.c */; };
+		E965C2EA1C15740200BED2A9 /* file_2.c in Sources */ = {isa = PBXBuildFile; fileRef = E965C2E91C15740200BED2A9 /* file_2.c */; };
+		E965C2EC1C1581E400BED2A9 /* global_static_variable.c in Sources */ = {isa = PBXBuildFile; fileRef = E965C2EB1C1581E400BED2A9 /* global_static_variable.c */; };
+		E965C2EE1C158CA600BED2A9 /* function_pointer.c in Sources */ = {isa = PBXBuildFile; fileRef = E965C2ED1C158CA600BED2A9 /* function_pointer.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,13 @@
 /* Begin PBXFileReference section */
 		E965C2D51C1514C300BED2A9 /* C */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C; sourceTree = BUILT_PRODUCTS_DIR; };
 		E965C2D81C1514C300BED2A9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		E965C2E01C152EBE00BED2A9 /* 2-demensional-array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "2-demensional-array.c"; sourceTree = "<group>"; };
+		E965C2E21C1556A100BED2A9 /* n-demensional-array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "n-demensional-array.c"; sourceTree = "<group>"; };
+		E965C2E61C1571E600BED2A9 /* file_1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = file_1.h; sourceTree = "<group>"; };
+		E965C2E71C15720B00BED2A9 /* file_1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = file_1.c; sourceTree = "<group>"; };
+		E965C2E91C15740200BED2A9 /* file_2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = file_2.c; sourceTree = "<group>"; };
+		E965C2EB1C1581E400BED2A9 /* global_static_variable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = global_static_variable.c; sourceTree = "<group>"; };
+		E965C2ED1C158CA600BED2A9 /* function_pointer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = function_pointer.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +70,24 @@
 		E965C2D71C1514C300BED2A9 /* C */ = {
 			isa = PBXGroup;
 			children = (
+				E965C2DF1C15161D00BED2A9 /* examples */,
 				E965C2D81C1514C300BED2A9 /* main.c */,
 			);
 			path = C;
+			sourceTree = "<group>";
+		};
+		E965C2DF1C15161D00BED2A9 /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				E965C2E91C15740200BED2A9 /* file_2.c */,
+				E965C2E71C15720B00BED2A9 /* file_1.c */,
+				E965C2E61C1571E600BED2A9 /* file_1.h */,
+				E965C2E01C152EBE00BED2A9 /* 2-demensional-array.c */,
+				E965C2E21C1556A100BED2A9 /* n-demensional-array.c */,
+				E965C2EB1C1581E400BED2A9 /* global_static_variable.c */,
+				E965C2ED1C158CA600BED2A9 /* function_pointer.c */,
+			);
+			name = examples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +146,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E965C2EA1C15740200BED2A9 /* file_2.c in Sources */,
+				E965C2E31C1556A100BED2A9 /* n-demensional-array.c in Sources */,
+				E965C2E81C15720B00BED2A9 /* file_1.c in Sources */,
+				E965C2EE1C158CA600BED2A9 /* function_pointer.c in Sources */,
+				E965C2E11C152EBE00BED2A9 /* 2-demensional-array.c in Sources */,
+				E965C2EC1C1581E400BED2A9 /* global_static_variable.c in Sources */,
 				E965C2D91C1514C300BED2A9 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +271,7 @@
 				E965C2DE1C1514C300BED2A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
